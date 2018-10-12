@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Kysymys</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <h1><span th:text="${kysymys.teksti}"></span></h1>
+        Kurssi:
+        <span th:text="${kysymys.kurssi}">                       
+        </span>
+        <br/>
+        Aihe:
+        <span th:text="${kysymys.aihe}">
+        </span>
+
+        <h2>Vastausvaihtoehdot</h2>
+
+
+        <ul>
+            <li th:each="vastaus : ${vastaukset}">
+                <span th:text="${vastaus.teksti}"></span>
+                <strong><span th:text="${oikein} ? 'Oikein' : 'V&auml;&auml;rin'"></span></strong>
+                <form th:action="@{~/delete/vastaus/{id}(id=${vastaus.id})}" method="POST">
+                    <input type="submit" value="Poista"/>
+                </form>
+                <br/>
+            </li>
+        </ul>
+
+        <h3>Lis&auml;&auml; uusi vastausvaihtoehto</h3>
+
+        <form method="POST" th:action="${'/kysymys/'+kysymys.id}">
+            <br/>Teksti:
+            <input type="text" name="teksti"/><br/>
+            <br/>Oikein:
+            <input type="checkbox" name="oikein" value="true"/><br/>
+            <br/>
+            <input type="submit" value="Lis&auml;&auml; kysymys!"/><br/>
+        </form>
+        
+        <br/>
+        <br/>
+        
+        <a th:href="@{~/kysymykset}">Kysymyslistaan</a>
+    </body>
+</html>
