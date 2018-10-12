@@ -21,7 +21,7 @@
         <ul>
             <li th:each="vastaus : ${vastaukset}">
                 <span th:text="${vastaus.teksti}"></span>
-                <strong><span th:text="${oikein} ? 'Oikein' : 'V&auml;&auml;rin'"></span></strong>
+                <strong><span th:text="${vastaus.oikein} ? 'Oikein' : 'V&auml;&auml;rin'"></span></strong>
                 <form th:action="@{~/delete/vastaus/{id}(id=${vastaus.id})}" method="POST">
                     <input type="submit" value="Poista"/>
                 </form>
