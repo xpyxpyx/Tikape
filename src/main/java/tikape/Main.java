@@ -22,7 +22,7 @@ public class Main {
         KysymysDao kysymysDao = new KysymysDao(database1);
         VastausDao vastausDao = new VastausDao(database1);
 
-        Spark.get("/kysymykset", (req, res) -> {
+        Spark.get("/", (req, res) -> {
             HashMap map = new HashMap<>();
             map.put("kysymykset", kysymysDao.findAll());
 
@@ -40,7 +40,7 @@ public class Main {
             Kysymys kysymys = new Kysymys(-1, kurssi, aihe, teksti);
             kysymysDao.saveOrUpdate(kysymys);
 
-            res.redirect("/kysymykset");
+            res.redirect("/");
             return "";
         });
 
@@ -65,7 +65,7 @@ public class Main {
             Vastaus vastaus = new Vastaus(-1, teksti, oikea, kysymysId);
             vastausDao.saveOrUpdate(vastaus);
 
-            res.redirect("/kysymykset");
+            res.redirect("/");
             return "";
         });
 
@@ -82,7 +82,7 @@ public class Main {
             Integer vastausId = Integer.parseInt(req.params(":id"));
             vastausDao.delete(vastausId);
 
-            res.redirect("/kysymykset");
+            res.redirect("/");
             return "";
         });
 
@@ -90,7 +90,7 @@ public class Main {
             Integer kysymysId = Integer.parseInt(req.params(":id"));
             kysymysDao.delete(kysymysId);
 
-            res.redirect("/kysymykset");
+            res.redirect("/");
             return "";
         });
 
