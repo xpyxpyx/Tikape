@@ -13,6 +13,11 @@ import tikape.domain.Vastaus;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+
+        if (System.getenv("PORT") != null) {
+            Spark.port(Integer.valueOf(System.getenv("PORT")));
+        }
+        
         Database database1 = new Database("jdbc:sqlite:kysymyspankki.db");
         KysymysDao kysymysDao = new KysymysDao(database1);
         VastausDao vastausDao = new VastausDao(database1);
