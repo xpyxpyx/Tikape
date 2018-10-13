@@ -81,6 +81,9 @@ public class KysymysDao implements Dao<Kysymys, Integer> {
                 PreparedStatement stmt = conn.prepareStatement("DELETE FROM Kysymys WHERE id = ?");
                 stmt.setInt(1, key);
                 stmt.executeUpdate();
+                PreparedStatement stmt2 = conn.prepareStatement("DELETE FROM Vastaus WHERE kysymys_id = ?");
+                stmt.setInt(1, key);
+                stmt.executeUpdate();
             }
         }
     }
