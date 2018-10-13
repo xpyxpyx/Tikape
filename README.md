@@ -31,10 +31,11 @@ kaikkia muutoksia tietokannasta.
 
 Käyttäjän on kuitenkin hyvä huomata, että virhe tulee esiin vain, jos sovelluksen rakennetta muutetaan ennen uudelleenkäynnistystä:
 sovelluksen uudelleenkäynnistäminen päivittämällä tai käynnistämällä uudestaan Herokusta ei nollaa tietokantaa alkutilaan, sillä
-sovelluksen rakenne on edelleen sama, ja vastaavasti Herokussa tehdyt muutokset säilyvät niin kauan,
-kun sovelluksen/repositorion rakennetta ei muuteta, koska vain silloin sovellus käynnistyy uudelleen repositorion mallista.
+sovelluksen rakenne on edelleen sama, ja vastaavasti Herokussa tehdyt muutokset säilyvät niin kauan, kun sovelluksen/repositorion
+rakennetta ei muuteta, koska vain silloin sovellus käynnistyy uudelleen repositorion mallista.
 
-Kansiorakenteesta sen verran, että templates-pakkauksesta (src/main/resources) löytyvät sivujen HTML-mallit (kysymykset.html, juurisivu
-ja kysymys.html, kysymyssivu), ja Source Packagesissa (src/main/java) on kaikki muu. Main (käynnistysluokka) on pakkauksessa tikape,
-luokkaoliot pakkauksessa tikape.domain, dao-pinnat pakkauksessa tikape.dao ja tietokanta pakkauksessa tikape.database. Pom.xml-sisältää
-riippuvuudet, ja se löytyy juuresta, samoin kuin Procfile, joka huolehtii sovelluksen käynnistämisestä Herokussa.
+Kansiorakenteesta sen verran, että templates-pakkauksesta (src/tikape/main/resources) löytyvät sivujen HTML-mallit (kysymykset.html,
+juurisivu ja kysymys.html, kysymyssivu), ja Source Packagesissa (src/tikape/main/java) on kaikki muu. Main (käynnistysluokka) on
+pakkauksessa tikape, luokkaoliot pakkauksessa tikape.domain, dao-pinnat pakkauksessa tikape.dao ja tietokanta pakkauksessa
+tikape.database. Pom.xml sisältää riippuvuudet, ja se löytyy juuresta, samoin kuin kysymyspankki-tietokannan
+tiedosto (kysymyspankki.db) ja Procfile, joka huolehtii sovelluksen käynnistämisestä Herokussa.
