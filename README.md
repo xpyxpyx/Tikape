@@ -11,8 +11,8 @@ Klikkaamalla kysymystä pääsee kysymyssivulle, josta näkee vaihtoehdot kuhunk
 Kysymyssivulla kysymykseen voi lisätä oikeita ja vääriä vaihtoehtoja yksitellen, ja useampi kuin yksi vastaus voi olla oikein.
 Jokaisen vaihtoehdon vieressä on tieto sen oikeellisuudesta, sekä poista-nappi, jolla voi poistaa kyseisen vaihtoehdon (sivu ohjautuu
 juureen eli kysymyslistaan tämän jälkeen).
-Kysymys-sivulla voi lisätä myös uusia vaihtoehtoja sivun alaosasta löytyvällä lomakkeella,^
-ja tarvittaessa päästä takaisin kysymyslistaan linkistä.
+Kysymys-sivulla voi lisätä myös uusia vaihtoehtoja sivun alaosasta löytyvällä lomakkeella, ja tarvittaessa päästä
+takaisin kysymyslistaan linkistä.
 
 Käyttövirheinä on huomioitu tyhjät kentät, saman kysymyksen lisääminen, ja saman vastauksen lisääminen saman kymyksen alle.
 Lisäksi delete-metodi on ohjelmoitu poistamaan vain olemassa olevaa tietoa, jotta tietokanta pysyy siistinä ja sinne ei suoriteta turhia
