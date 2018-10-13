@@ -78,12 +78,11 @@ public class KysymysDao implements Dao<Kysymys, Integer> {
             Kysymys byId = findOne(key);
 
             if (byId != null) {
-                PreparedStatement stmt = conn.prepareStatement("DELETE FROM Vastaus WHERE id = ?");
+                PreparedStatement stmt = conn.prepareStatement("DELETE FROM Kysymys WHERE id = ?");
                 stmt.setInt(1, key);
                 stmt.executeUpdate();
             }
         }
-
     }
 
     public Kysymys findOne(String teksti) throws SQLException {
