@@ -40,7 +40,7 @@ public class Main {
             Kysymys kysymys = new Kysymys(-1, kurssi, aihe, teksti);
             kysymysDao.saveOrUpdate(kysymys);
 
-            res.redirect("/kysymykset");
+            res.redirect("/");
             return "";
         });
 
