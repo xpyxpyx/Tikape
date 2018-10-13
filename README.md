@@ -4,7 +4,8 @@ Kurssin Tietokantojen perusteet (lempinimeltään tikape), syksy 2018, toinen ha
 
 
 Sovellus on kysymyspankki, johon voi lisätä kysymyksiä eri kursseista ja aiheista, sekä poistaa niitä.
-Juurisivulla kaikki pankkiin lisätyt kysymykset on listattu kursseittain järjestettynä, ja jokaisesta kerrotaan lisäksi aihe.
+Juurisivulla kaikki pankkiin lisätyt kysymykset on listattu kursseittain järjestettynä, ja jokaisesta kysymyksestä 
+kerrotaan kurssin lisäksi aihe.
 Sivun alaosassa on lomake, josta voi lisätä uuden kysymyksen listaan.
 Klikkaamalla kysymystä pääsee kysymyssivulle, josta näkee vaihtoehdot kuhunkin kysymykseen. 
 
