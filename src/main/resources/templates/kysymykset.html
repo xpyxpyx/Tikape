@@ -9,7 +9,8 @@
     <body>
         <h1>Kysymyspankki</h1>
 
-        <p>Kysymykset</p>
+        
+        <h2>Kysymykset</h2>
 
         <ul>
             <li th:each="kysymys : ${kysymykset}">
@@ -35,7 +36,7 @@
             </li>
         </ul>
 
-        <h2>Lis&auml;&auml; uusi kysymys</h2>
+        <h3>Lis&auml;&auml; uusi kysymys</h3>
 
         <form method="POST" action="/kysymykset">
             <br/>Kurssi: <input type="text" name="kurssi"/><br/>
